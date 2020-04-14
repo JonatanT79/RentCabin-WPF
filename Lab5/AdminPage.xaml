@@ -1,0 +1,36 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab5"
+        xmlns:Properties="clr-namespace:Lab5.Properties" x:Class="Lab5.AdminPage"
+        mc:Ignorable="d"
+        Title="AdminWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="214*"/>
+            <ColumnDefinition Width="429*"/>
+            <ColumnDefinition Width="149*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="AdminPage" HorizontalAlignment="Left" Margin="41,33,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="Stuga1" HorizontalAlignment="Left" Margin="61,86,0,0" VerticalAlignment="Top" Height="198" Width="602" Grid.ColumnSpan="3"/>
+        <Button x:Name="btnCabin1" Content="Button" HorizontalAlignment="Left" Margin="61,308,0,0" VerticalAlignment="Top" Width="75" Click="BtnCabin1_Click"/>
+        <TextBox x:Name="DeleteTxtBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="158,308,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-1.316,-0.183"/>
+        <Button x:Name="DeleteBtn" Content="Radera" Grid.Column="1" HorizontalAlignment="Left" Margin="158,336,0,0" VerticalAlignment="Top" Width="75" Click="DeleteId"/>
+        <Label Content="Radera användare med id:" Grid.Column="1" HorizontalAlignment="Left" Margin="0,305,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.753,0.645" Width="153" Height="23"/>
+        <Label Content="Uppdatera användare med id:" Grid.Column="1" HorizontalAlignment="Left" Margin="391,33,0,0" VerticalAlignment="Top" Width="177" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="userTxtBox" Grid.Column="2" HorizontalAlignment="Left" Margin="49,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.006,-0.264" Height="23" Width="75"/>
+        <Button x:Name="UpdateUserBtn" Content="Visa Info:" Grid.Column="1" HorizontalAlignment="Left" Margin="391,64,0,0" VerticalAlignment="Top" Width="75" Click="UpdateUser_Click" Height="20" Grid.ColumnSpan="2"/>
+        <Label Content="Förnamn" Grid.Column="2" HorizontalAlignment="Left" Margin="0,86,0,0" VerticalAlignment="Top" Width="90"/>
+        <Label Content="Efternamn" Grid.Column="2" HorizontalAlignment="Left" Margin="0,138,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.354,0.503"/>
+        <Label Content="Tel:&#xD;&#xA;" Grid.Column="2" HorizontalAlignment="Left" Margin="0,196,0,0" VerticalAlignment="Top" Width="75" Height="24" RenderTransformOrigin="-0.28,0.607"/>
+        <Label Content="mail&#xD;&#xA;" Grid.Column="2" HorizontalAlignment="Left" Margin="0,258,0,0" VerticalAlignment="Top" Width="75" Height="26"/>
+        <TextBox x:Name="FirstnameTxt" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="0,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="PhoneText" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="0,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="LastnameTxt" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="0,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="MailTxt" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="0,294,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="SaveChanges" Content="Spara uppdateringar " Grid.Column="2" HorizontalAlignment="Left" Margin="0,347,0,0" VerticalAlignment="Top" Width="114" Height="48" Click="SaveChanges_Click"/>
+
+    </Grid>
+</Window>

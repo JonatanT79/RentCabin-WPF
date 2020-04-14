@@ -1,0 +1,62 @@
+﻿<Window x:Class="Lab5.SignUpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab5"
+        mc:Ignorable="d"
+        Title="Ny Konto" Height="450" Width="350" Visibility="Visible" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <LinearGradientBrush>
+            <GradientStop Color="#FF007CFF" Offset="0"/>
+            <GradientStop Color="#FF002245" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+
+    <Grid>
+        <Rectangle 
+            Width="280" 
+            Height="370" 
+            RadiusY="20" 
+            RadiusX="400" Fill="White">
+            <Rectangle.Effect>
+                <DropShadowEffect 
+                    BlurRadius="30" />
+            </Rectangle.Effect>
+        </Rectangle>
+
+        <Grid Width="250" Height="290">
+
+
+            <StackPanel VerticalAlignment="Center" Margin="5" Grid.RowSpan="2">
+                <TextBlock Text="Förnamn" Foreground="Gray"/>
+                <TextBox Name="FirstNameTxt" Margin="5,10"/>
+
+                <TextBlock Text="Efternamn"  Foreground="Gray"/>
+                <TextBox Name="LastNameTxt"  Margin="5,10"/>
+
+                <TextBlock  Text="Telefonnummer" Foreground="Gray"/>
+                <TextBox Name="PhoneTxt" Margin="5,10"/>
+
+                <TextBlock Text="E-post"  Foreground="Gray" />
+                <TextBox Name="EmailTxt" Margin="5,10" TextChanged="EmailTxt_TextChanged"/>
+
+                <TextBlock Text="Lösenord"  Foreground="Gray"/>
+                <PasswordBox Name="PasswordTxt" Margin="5,10"/>
+
+            </StackPanel>
+
+            <Button Name="SignupButton" Content="Skapa konto" Click="SignupButton_Click"
+                    HorizontalAlignment="Center" VerticalAlignment="Bottom" 
+                    Margin="-20" Foreground="#FF2196F3" 
+                    Cursor="Hand" FontSize="18" Grid.Row="1">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <ContentPresenter Content="{TemplateBinding Content}"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+        </Grid>
+    </Grid>
+</Window>

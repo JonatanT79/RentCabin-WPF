@@ -1,0 +1,76 @@
+﻿<Window x:Class="Lab5.LogInWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab5"
+        mc:Ignorable="d"
+        Title="Logga in" Height="450" Width="350" Visibility="Visible" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <LinearGradientBrush>
+            <GradientStop Color="#FF007CFF" Offset="0"/>
+            <GradientStop Color="#FF002245" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+
+    <Grid>
+        <Rectangle 
+            Width="280" 
+            Height="280" 
+            RadiusY="20" 
+            RadiusX="400" Fill="White">
+            <Rectangle.Effect>
+                <DropShadowEffect 
+                    BlurRadius="30" />
+            </Rectangle.Effect>
+        </Rectangle>
+
+        <Grid Width="250" Height="290">
+
+            <Label Content="Kundinloggning" 
+                   HorizontalAlignment="Center" Foreground="DarkSlateGray" 
+                   FontSize="20" Margin="20" />
+
+            <StackPanel VerticalAlignment="Center" Margin="5,5,5,50">
+
+                <TextBlock Text="E-post" Grid.Row="1" Foreground="Gray" Margin="0,0,200.525,0"/>
+                <TextBox Name="EmailTxt" Grid.Row="1" Margin="5,10" TextChanged="EmailTxt_TextChanged" />
+
+                <TextBlock Text="Lösenord" Grid.Row="2" Foreground="Gray"/>
+                <PasswordBox Name="PasswordTxt" Grid.Row="2"  Margin="5,10"/>
+            </StackPanel>
+
+            <Button Name="LogInButton" Content="LOGGA IN" 
+                       Foreground="DarkSlateGray" FontSize="18" 
+                       HorizontalAlignment="Center" VerticalAlignment="Center"
+                       Cursor="Hand" Margin="75,196,69,66" Click="LogInButton_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <ContentPresenter Content="{TemplateBinding Content}"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Border Height="1" Width="200" 
+                    Margin="26,236,24,53" 
+                    BorderBrush="#FF040000" 
+                    Background="Black">
+            </Border>
+
+            <Button Name="GoToNewUserButton" Content="Skapa ett konto" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Bottom" 
+                    Margin="20" Foreground="#FF2196F3" 
+                    Cursor="Hand" FontSize="18" 
+                   Click="GoToNewUserButton_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <ContentPresenter Content="{TemplateBinding Content}"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+
+        </Grid>
+    </Grid>
+</Window>
